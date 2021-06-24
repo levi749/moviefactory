@@ -30,7 +30,7 @@ async def start(bot, update):
             await bot.send_document(
                 chat_id=update.chat.id,
                 document = file_id,
-                caption = "👇നമ്മുടെ ഗ്രൂപ്പ്‌ ഷെയർ ചെയ്യൂ👇",
+                caption = " @MFMOVIES3 ",
                 parse_mode="html",
                 reply_to_message_id=update.message_id,
                 reply_markup=InlineKeyboardMarkup(
@@ -38,7 +38,7 @@ async def start(bot, update):
                         [
                             InlineKeyboardButton
                                 (
-                                    '💘 SHARE 💘', url="https://telegram.me/share/url?url=https://t.me/filmcornermm"
+                                    '💘 CHANNEL 💘', url="https://t.me/MF_FILMM"
                                 )
                         ]
                     ]
@@ -57,7 +57,7 @@ async def start(bot, update):
                         [
                             InlineKeyboardButton
                                 (
-                                    'Developers', url="https://t.me/filmcornermm"
+                                    'Developers', url="https://t.me/MF_FILMM"
                                 )
                         ]
                     ]
@@ -76,7 +76,7 @@ async def start(bot, update):
                         [
                             InlineKeyboardButton
                                 (
-                                    'Developers', url="https://t.me/filmcornermm"
+                                    'Developers', url="https://t.me/MF_FILMM"
                                 )
                         ]
                     ]
@@ -89,10 +89,10 @@ async def start(bot, update):
         return
 
     buttons = [[
-        InlineKeyboardButton('GROUP', url='https://t.me/filmcornermm'),
-        InlineKeyboardButton('Source Code 🧾', url ='https://github.com/SMILE-KILLER10/auto-filter-bot')
+        InlineKeyboardButton('🕵️ CREATOR ', url='https://t.me/@JohnDalton_TG'),
+        InlineKeyboardButton('⚠️JOIN ', url ='https://t.me/MF_FILMM')
     ],[
-        InlineKeyboardButton('CHANNEL', url='https://t.me/publicchannalin')
+        InlineKeyboardButton('⚠️ GROUP', url='https://t.me/MF_CHATGROUP')
     ],[
         InlineKeyboardButton('Help ⚙', callback_data="help")
     ]]
@@ -112,7 +112,7 @@ async def start(bot, update):
 @Client.on_message(filters.command(["help"]) & filters.private, group=1)
 async def help(bot, update):
     buttons = [[
-        InlineKeyboardButton('Home ⚡', callback_data='start'),
+        InlineKeyboardButton('Home 🏠', callback_data='start'),
         InlineKeyboardButton('About 🚩', callback_data='about')
     ],[
         InlineKeyboardButton('Close 🔐', callback_data='close')
@@ -133,7 +133,7 @@ async def help(bot, update):
 async def about(bot, update):
     
     buttons = [[
-        InlineKeyboardButton('Home ⚡', callback_data='start'),
+        InlineKeyboardButton('Home 🏠', callback_data='start'),
         InlineKeyboardButton('Close 🔐', callback_data='close')
     ]]
     reply_markup = InlineKeyboardMarkup(buttons)
